@@ -1,7 +1,7 @@
 #Univariate Conjunct Type Alternation
 ##==========================================================================================================
 ## Install packages (polytomous must be installed from source)
-install.packages("~/Downloads/polytomous_0.1.6.tar.gz", repos = NULL, type="source")
+install.packages("./polytomous_0.1.6.tar.gz", repos = NULL, type="source")
 library(polytomous)
 
 ##==========================================================================================================
@@ -37,11 +37,11 @@ issues.ii.Cnjtypes<-lapply(II.Univariate.Cnjtypes.1$univariate,cochran_Cnjtypes)
 II.Univariate.Cnjtypes <- nominal(OrderType ~ PV.Time + II.sense + II.natural.land + II.weather +  auto.vii.1 + auto.ni.3.actor + auto.vai.6 + auto.vii.2 + auto.vii.5 + auto.vii.3 + auto.vii.4 + Sg.actor + NI.object.actor + auto.ni.3.actor + Dem.actor + Pron.actor + Prox.actor + Med.actor + NI.nominal.actor + actor.3 + actor.4, data = subset(AWCnj, II))
 
 ####Write to file
-sink(file = 'cnjtype/issues.ii.Cnjtypes.txt')
+sink(file = './issues.ii.Cnjtypes.txt')
 print(issues.ii.Cnjtypes, max.print = NA)
 sink(NULL)
 
-sink(file = 'cnjtype/IIUni-cnjtypes.txt')
+sink(file = './IIUni-cnjtypes.txt')
 print(summary(II.Univariate.Cnjtypes), max.print = NA)
 sink(NULL)
 
@@ -49,7 +49,7 @@ sink(NULL)
 II.Uni.cnj.Sig<- subset(summary(II.Univariate.Cnjtypes)$sumry.table, alpha.X2 <0.05)
 
 ####Write to file
-sink(file = 'cnjtype/IIUniSig-cnjtypes.txt')
+sink(file = './IIUniSig-cnjtypes.txt')
 print(II.Uni.cnj.Sig, max.print = NA)
 sink(NULL)
 
@@ -78,11 +78,11 @@ issues.ai.Cnjtypes<-lapply(AI.Univariate.Cnjtypes.0$univariate,cochran_Cnjtypes)
 AI.Univariate.Cnjtypes <- nominal(OrderType ~  PV.Time + PV.Move + PV.Qual + PV.Discourse + PV.StartFin + PV.Position + PV.WantCan + AI.do + AI.state + AI.speech + AI.reflexive + AI.cooking + AI.health + AI.plural + AI.money.count + AI.pray + RdplW + RdplS +  auto.vai.5 + auto.vai.2 + auto.vai.6 + auto.vai.12 + auto.vai.11 + auto.na.5.actor + auto.vai.9 + auto.vai.3 + auto.vai.4 + auto.vai.13 + auto.nda.1.actor + auto.na.7.actor + auto.vai.8 + auto.vai.1 + auto.vai.7 + auto.vai.10 + auto.na.3.actor + auto.nda.3.actor + auto.na.1.actor + auto.na.2.actor + NA.persons.actor + auto.na.5.actor + Sg.actor + Pron.actor + Pl.actor + D.actor + NDA.Relations.actor + Dem.actor + Pers.actor + auto.nda.1.actor + Px1Sg.actor + auto.na.7.actor + Prox.actor + Incl.actor + Med.actor + NA.beast.of.burden.actor + auto.na.3.actor + auto.nda.3.actor + Obv.actor + auto.na.1.actor + auto.na.2.actor + NA.food.actor + auto.na.4.actor + auto.na.6.actor + actor.3 + actor.1 + actor.2 + actor.4, data = subset(AWCnj, AI))
 
 ####Write to file
-sink(file = 'cnjtype/issues.ai.Cnjtypes.txt')
+sink(file = './issues.ai.Cnjtypes.txt')
 print(issues.ai.Cnjtypes, max.print = NA)
 sink(NULL)
 
-sink(file = 'cnjtype/AIUni-cnjtypes.txt')
+sink(file = './AIUni-cnjtypes.txt')
 print(summary(AI.Univariate.Cnjtypes), max.print = NA)
 sink(NULL)
 
@@ -90,7 +90,7 @@ sink(NULL)
 AI.Uni.cnj.Sig<- subset(summary(AI.Univariate.Cnjtypes)$sumry.table, alpha.X2 <0.05)
 
 ####Write to file
-sink(file = 'cnjtype/AIUniSig-cnjtypes.txt')
+sink(file = './AIUniSig-cnjtypes.txt')
 print(AI.Uni.cnj.Sig, max.print = NA)
 sink(NULL)
 
@@ -121,11 +121,11 @@ issues.ti.Cnjtypes<-lapply(TI.Univariate.Cnjtypes.0$univariate,cochran_Cnjtypes)
 TI.Univariate.Cnjtypes <- nominal(OrderType ~ PV.Time + PV.Move + PV.Discourse + PV.WantCan + PV.Qual + PV.Position + TI.do + TI.cognitive + TI.speech + RdplS +  auto.vti.1 + auto.vti.4 + auto.ni.3.goal + auto.vti.2 + auto.vti.3 + auto.na.5.actor + auto.ni.9.goal + auto.ndi.1.goal + auto.ni.2.goal + auto.ni.10.goal + auto.ni.6.goal + NA.persons.actor + auto.na.5.actor + Sg.actor + Pron.actor + Pl.actor + Pers.actor + D.actor + NDA.Relations.actor + auto.na.7.actor + auto.nda.1.actor + auto.na.1.actor + actor.3 + actor.1 + actor.2 + Sg.goal + NI.object.goal + auto.ni.3.goal + Dem.goal + Pron.goal + Pl.goal + Prox.goal + NI.nominal.goal + Med.goal + NI.natural.force.goal + auto.ni.9.goal + D.goal + auto.ndi.1.goal + auto.ni.2.goal + NDI.Body.goal + auto.ni.10.goal + NI.place.goal + auto.ni.6.goal + NI.nature.plants.goal + Px3Sg.goal + auto.ni.4.goal + auto.ni.7.goal + auto.ni.1.goal + auto.ni.8.goal + auto.ni.5.goal, data = subset(AWCnj, TI))
 
 ###Write to file
-sink(file = 'cnjtype/issues.ti.Cnjtypes.txt')
+sink(file = './issues.ti.Cnjtypes.txt')
 print(issues.ti.Cnjtypes, max.print = NA)
 sink(NULL)
 
-sink(file = 'cnjtype/TIUni-cnjtypes.txt')
+sink(file = './TIUni-cnjtypes.txt')
 print(summary(TI.Univariate.Cnjtypes), max.print = NA)
 sink(NULL)
 
@@ -133,7 +133,7 @@ sink(NULL)
 TI.Uni.cnj.Sig<- subset(summary(TI.Univariate.Cnjtypes)$sumry.table, alpha.X2 <0.05)
 
 ###Write to file
-sink(file = 'cnjtype/TIUniSig-cnjtypes.txt')
+sink(file = './TIUniSig-cnjtypes.txt')
 print(TI.Uni.cnj.Sig, max.print = NA)
 sink(NULL)
 
@@ -163,11 +163,11 @@ issues.ta.Cnjtypes<-lapply(TA.Univariate.Cnjtypes.0$univariate,cochran_Cnjtypes)
 TA.Univariate.Cnjtypes <- nominal(OrderType ~ PV.Time + PV.Move + PV.Discourse + PV.Qual + PV.Position + PV.WantCan + PV.StartFin + TA.do + TA.cognitive + TA.speech + TA.food + TA.money.count + TA.allow + RdplS + RdplW +  auto.vta.6 + auto.vta.3 + auto.vta.5 + auto.vta.1 + auto.na.5.goal + auto.vta.4 + auto.nda.1.goal + auto.na.5.actor + auto.vta.2 + auto.na.7.goal + auto.na.2.goal + auto.na.3.goal + auto.nda.1.actor + auto.na.7.actor + auto.nda.3.goal + NA.persons.actor + Sg.actor + auto.na.5.actor + Pron.actor + D.actor + NDA.Relations.actor + Px1Sg.actor + auto.nda.1.actor + Dem.actor + auto.na.7.actor + Obv.actor + Pl.actor + Prox.actor + Pers.actor + auto.nda.3.actor + auto.na.1.actor + actor.3 + actor.1 + actor.4 + actor.2 + goal.3 + goal.4 + goal.1 + goal.2 + NA.persons.goal + auto.na.5.goal + Sg.goal + Obv.goal + D.goal + NDA.Relations.goal + Pl.goal + Pron.goal + auto.nda.1.goal + Dem.goal + NA.beast.of.burden.goal + Px1Sg.goal + Prox.goal + auto.na.7.goal + auto.na.2.goal + ayisiyiniw.goal + auto.na.3.goal + Px3Sg.goal + Pers.goal + auto.nda.3.goal + auto.na.6.goal + auto.na.1.goal, data = subset(AWCnj, TA))
 
 ###Write to file
-sink(file = 'cnjtype/issues.ta.Cnjtypes.txt')
+sink(file = './issues.ta.Cnjtypes.txt')
 print(issues.ta.Cnjtypes, max.print = NA)
 sink(NULL)
 
-sink(file = 'cnjtype/TAUni-cnjtypes.txt')
+sink(file = './TAUni-cnjtypes.txt')
 print(summary(TA.Univariate.Cnjtypes), max.print = NA)
 sink(NULL)
 
@@ -175,6 +175,6 @@ sink(NULL)
 TA.Uni.cnj.Sig<- subset(summary(TA.Univariate.Cnjtypes)$sumry.table, alpha.X2 <0.05)
 
 ###Write to file
-sink(file = 'cnjtype/TAUniSig-cnjtypes.txt')
+sink(file = './TAUniSig-cnjtypes.txt')
 print(TA.Uni.cnj.Sig, max.print = NA)
 sink(NULL)
