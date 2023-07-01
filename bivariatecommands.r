@@ -1,7 +1,7 @@
 #BiVariate Commands for all Alternations
 ##==========================================================================================================
 ## Install packages (polytomous must be installed from source)
-install.packages("~/Downloads/polytomous_0.1.6.tar.gz", repos = NULL, type="source")
+install.packages("./polytomous_0.1.6.tar.gz", repos = NULL, type="source")
 library(polytomous)
 
 ##==========================================================================================================
