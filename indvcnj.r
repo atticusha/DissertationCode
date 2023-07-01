@@ -1,7 +1,7 @@
 #Univariate Independent vs. Conjunct Alternation
 ##==========================================================================================================
 ## Install packages (polytomous must be installed from source)
-install.packages("~/Downloads/polytomous_0.1.6.tar.gz", repos = NULL, type="source")
+install.packages("./polytomous_0.1.6.tar.gz", repos = NULL, type="source")
 library(polytomous)
 
 ##==========================================================================================================
@@ -37,15 +37,15 @@ issues.ii.indcnj<-lapply(II.Univariate.indcnj.0$univariate,cochran_indcnj)
 II.Univariate.indcnj <- nominal(TopOrder ~ PV.Time + PV.Move + PV.Qual + II.sense + II.natural.land + II.weather +  auto.vii.1 + auto.ni.3.actor + auto.vii.2 + auto.vai.6 + auto.vii.3 + auto.vii.4 + auto.vii.5 + Sg.actor + NI.object.actor + auto.ni.3.actor + Pron.actor + Dem.actor + Prox.actor + NI.nominal.actor + Pl.actor + Med.actor + auto.ni.6.actor + auto.ni.7.actor + actor.3 + actor.4, data = subset(AWnimp, II))
 
 ###Write to file
-sink(file = 'indcnj/issues.ii.indcnj.txt')
+sink(file = './issues.ii.indcnj.txt')
 print(issues.ii.indcnj, max.print = NA)
 sink(NULL)
 
-sink(file = 'indcnj/IIUni-indcnj.txt')
+sink(file = './IIUni-indcnj.txt')
 print(summary(II.Univariate.indcnj), max.print = NA)
 sink(NULL)
 
-sink(file = 'indcnj/IIUniSig-indcnj.txt')
+sink(file = './IIUniSig-indcnj.txt')
 print(subset(summary(II.Univariate.indcnj)$sumry.table, alpha.X2 <0.05), max.print = NA)
 sink(NULL)
 
@@ -74,17 +74,17 @@ issues.ai.indcnj<-lapply(AI.Univariate.indcnj.0$univariate,cochran_indcnj)
 AI.Univariate.indcnj <- nominal(TopOrder ~ PV.Time + PV.Move + PV.StartFinWantCan + PV.Qual + PV.StartFin + PV.Discourse + PV.Position + PV.WantCan + AI.do + AI.state + AI.speech + AI.cooking + AI.reflexive + AI.health + AI.plural + AI.money.count + AI.pray + AI.heat.fire + RdplS + RdplW +  auto.vai.2 + auto.vai.5 + auto.vai.6 + auto.vai.12 + auto.vai.11 + auto.na.5.actor + auto.vai.9 + auto.vai.3 + auto.nda.1.actor + auto.vai.4 + auto.vai.13 + auto.na.7.actor + auto.vai.1 + auto.vai.8 + auto.vai.7 + auto.nda.3.actor + auto.vai.10 + auto.na.1.actor + auto.na.2.actor + auto.na.3.actor + auto.na.4.actor + NA.persons.actor + auto.na.5.actor + Sg.actor + Pron.actor + Pl.actor + D.actor + NDA.Relations.actor + Dem.actor + Pers.actor + Px1Sg.actor + auto.nda.1.actor + auto.na.7.actor + Prox.actor + Incl.actor + Med.actor + NA.beast.of.burden.actor + auto.nda.3.actor + auto.na.1.actor + Obv.actor + auto.na.2.actor + auto.na.3.actor + NA.food.actor + Indef.actor + Px3Sg.actor + auto.na.4.actor + auto.na.6.actor + actor.3 + actor.1 + actor.2 + actor.4, data = subset(AWnimp, AI))
 
 ###Write to file
-sink(file = 'indcnj/AIUni-indcnj.txt')
+sink(file = './AIUni-indcnj.txt')
 print(summary(AI.Univariate.indcnj), max.print = NA)
 sink(NULL)
 
-sink(file = 'indcnj/issues.ai.indcnj.txt')
+sink(file = './issues.ai.indcnj.txt')
 print(issues.ai.indcnj, max.print = NA)
 sink(NULL)
 ###Make significance table
 AI.Uni.indcnj.Sig<- subset(summary(AI.Univariate.indcnj)$sumry.table, alpha.X2 <0.05)
 
-sink(file = 'indcnj/AIUniSig-indcnj.txt')
+sink(file = './AIUniSig-indcnj.txt')
 print(AI.Uni.indcnj.Sig, max.print = NA)
 sink(NULL)
 
@@ -112,17 +112,17 @@ issues.ti.indcnj<-lapply(TI.Univariate.indcnj.0$univariate,cochran_indcnj)
 TI.Univariate.indcnj <- nominal(TopOrder ~ PV.Time + PV.Move + PV.StartFinWantCan + PV.WantCan + PV.Discourse + PV.Position + PV.Qual + PV.StartFin + TI.do + TI.cognitive + TI.speech + TI.money.count + RdplW + RdplS +  auto.vti.1 + auto.vti.4 + auto.ni.3.goal + auto.vti.2 + auto.vti.3 + auto.na.5.actor + auto.ni.9.goal + auto.ni.2.goal + auto.ndi.1.goal + auto.ni.6.goal + auto.na.7.actor + auto.ni.10.goal + auto.ni.7.goal + auto.nda.1.actor + auto.ni.4.goal + auto.ni.1.goal + auto.na.1.actor + auto.ni.8.goal + auto.ni.5.goal + NA.persons.actor + auto.na.5.actor + Pron.actor + Sg.actor + Pers.actor + Pl.actor + D.actor + NDA.Relations.actor + auto.na.7.actor + Dem.actor + Px1Sg.actor + auto.nda.1.actor + Incl.actor + Prox.actor + auto.na.1.actor + actor.3 + actor.1 + actor.2 + actor.4 + Sg.goal + NI.object.goal + auto.ni.3.goal + Dem.goal + Pron.goal + Pl.goal + Prox.goal + Med.goal + NI.nominal.goal + NI.natural.force.goal + auto.ni.9.goal + D.goal + auto.ni.2.goal + auto.ndi.1.goal + NDI.Body.goal + auto.ni.6.goal + NI.nature.plants.goal + auto.ni.10.goal + auto.ni.7.goal + Px3Sg.goal + NI.place.goal + auto.ni.4.goal + Der.Dim.goal + auto.ni.1.goal + auto.ni.8.goal + auto.ni.5.goal + Px1Sg.goal, data = subset(AWnimp, TI))
 
 ####Write to file
-sink(file = 'indcnj/TIUni-indcnj.txt')
+sink(file = './TIUni-indcnj.txt')
 print(summary(TI.Univariate.indcnj), max.print = NA)
 sink(NULL)
 
-sink(file = 'indcnj/issues.ti.indcnj.txt')
+sink(file = './issues.ti.indcnj.txt')
 print(issues.ti.indcnj, max.print = NA)
 sink(NULL)
 ####Make significance table
 TI.Uni.indcnj.Sig<- subset(summary(TI.Univariate.indcnj)$sumry.table, alpha.X2 <0.05)
 
-sink(file = 'indcnj/TIUniSig-indcnj.txt')
+sink(file = './TIUniSig-indcnj.txt')
 print(TI.Uni.indcnj.Sig, max.print = NA)
 sink(NULL)
 
@@ -149,11 +149,11 @@ issues.ta.indcnj<-lapply(TA.Univariate.indcnj.0$univariate,cochran_indcnj)
 TA.Univariate.indcnj <- nominal(TopOrder ~ PV.Time + PV.Move + PV.Discourse + PV.Qual + PV.WantCan + PV.Position + PV.StartFin + TA.speech + TA.cognitive + TA.do + TA.food + TA.money.count + TA.allow + auto.vta.6 + auto.vta.3 + auto.vta.5 + auto.vta.1 + auto.na.5.goal + auto.nda.1.goal + auto.na.5.actor + auto.vta.4 + auto.vta.2 + auto.na.7.goal + auto.na.2.goal + auto.na.3.goal + auto.nda.1.actor + auto.na.7.actor + auto.nda.3.goal + auto.vta.7 + auto.nda.3.actor + auto.na.1.goal + auto.na.1.actor + auto.na.6.goal + NA.persons.actor + Sg.actor + auto.na.5.actor + Pron.actor + D.actor + NDA.Relations.actor + Px1Sg.actor + Dem.actor + auto.nda.1.actor + Pers.actor + auto.na.7.actor + Prox.actor + Obv.actor + Pl.actor + auto.nda.3.actor + auto.na.1.actor + Incl.actor + Med.actor + NA.religious.actor + actor.3 + actor.1 + actor.4 + actor.2 + goal.3 + goal.4 + goal.1 + goal.2 + NA.persons.goal + Sg.goal + auto.na.5.goal + Obv.goal + D.goal + NDA.Relations.goal + Pl.goal + Pron.goal + auto.nda.1.goal + Dem.goal + Px1Sg.goal + NA.beast.of.burden.goal + Prox.goal + auto.na.7.goal + auto.na.2.goal + auto.na.3.goal + Px3Sg.goal + Pers.goal + auto.nda.3.goal + Med.goal + NA.food.goal + auto.na.1.goal + Px3Pl.goal + auto.na.6.goal + Px12Pl.goal, data = subset(AWnimp, TA))
 
 ####Write to file
-sink(file = 'indcnj/TAUni-indcnj.txt')
+sink(file = './TAUni-indcnj.txt')
 print(summary(TA.Univariate.indcnj), max.print = NA, digits=1)
 sink(NULL)
 
-sink(file = 'indcnj/issues.ta.indcnj.txt')
+sink(file = './issues.ta.indcnj.txt')
 print(issues.ta.indcnj, max.print = NA)
 sink(NULL)
 
@@ -161,7 +161,7 @@ sink(NULL)
 TA.Uni.indcnj.Sig<- subset(summary(TA.Univariate.indcnj)$sumry.table, alpha.X2 <0.05)
 
 ####Write to file
-sink(file = 'indcnj/TAUniSig-indcnj.txt')
+sink(file = './TAUniSig-indcnj.txt')
 print(TA.Uni.indcnj.Sig, max.print = NA)
 sink(NULL)
 
