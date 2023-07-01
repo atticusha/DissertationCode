@@ -68,10 +68,10 @@ paste(paste(names(which(sort(colSums(subset(AWive, AI)[grep("PV.[A-Z]", names(su
 ####Create initial univarite analysis
 AI.Univariate.ive.0 <- nominal(OrderType ~ PV.Time + PV.Move + PV.Qual + PV.StartFin + PV.Discourse + PV.Position + PV.WantCan + AI.do + AI.state + AI.speech + AI.cooking + AI.reflexive + AI.health + AI.plural + AI.money.count + AI.pray + AI.heat.fire + RdplS + RdplW +  auto.vai.2 + auto.vai.5 + auto.vai.6 + auto.vai.12 + auto.vai.11 + auto.na.5.actor + auto.vai.9 + auto.vai.3 + auto.nda.1.actor + auto.vai.4 + auto.vai.13 + auto.na.7.actor + auto.vai.8 + auto.vai.1 + auto.nda.3.actor + auto.vai.7 + auto.vai.10 + auto.na.2.actor + auto.na.1.actor + auto.na.3.actor + auto.na.4.actor + auto.na.6.actor + NA.persons.actor + auto.na.5.actor + Sg.actor + Pron.actor + Pl.actor + D.actor + NDA.Relations.actor + Px1Sg.actor + Pers.actor + auto.nda.1.actor + Dem.actor + auto.na.7.actor + Prox.actor + Incl.actor + Med.actor + auto.nda.3.actor + NA.beast.of.burden.actor + Obv.actor + auto.na.2.actor + auto.na.1.actor + NA.food.actor + auto.na.3.actor + Px3Sg.actor + auto.na.4.actor + Indef.actor + Px12Pl.actor + auto.na.6.actor + actor.3 + actor.1 + actor.2 + actor.4, data = subset(AWive, AI))
 
-###Check cochrane condition; step 1) remove things that aren't about 1
+####Check cochrane condition; step 1) remove things that aren't about 1
 for (i in AI.Univariate.ive.0$univariate)
 {print(chisq.test(i$posthoc$ctable)$expected<0.8)}
-### No issue, move on to step 2) make sure 0 of expected are <5
+####No issue, move on to step 2) make sure 0 of expected are <5
 issues.ai.ive<-lapply(AI.Univariate.ive.0$univariate,cochran_ive)
 
 ####Create final univarite analysis
@@ -110,7 +110,7 @@ TI.Univariate.ive.0 <- nominal(OrderType ~ PV.Time + PV.Move + PV.Position + PV.
 
 for (i in TI.Univariate.ive.0$univariate)
 {print(chisq.test(i$posthoc$ctable)$expected<0.8)}
-### No issue, move on to step 2) make sure 0 of expected are <5
+####No issue, move on to step 2) make sure 0 of expected are <5
 issues.ti.ive<-lapply(TI.Univariate.ive.0$univariate,cochran_ive)
 
 ####Create final univarite analysis
@@ -134,7 +134,7 @@ print(TI.Uni.ive.Sig, max.print = NA)
 sink(NULL)
 
 ###TA ANALYSIS
-####Paste variables the occure more than ten times
+####Paste variables the occur more than ten times
 paste(paste(names(which(sort(colSums(subset(AWive, TA)[grep("PV.[A-Z]", names(subset(AWive, TA)), value = TRUE)]), decr=T)>=10)), collapse =" + "), "+",
       paste(names(which(sort(colSums(subset(AWive, TA)[grep("^TA...*", names(subset(AWive, TA)), value = TRUE)]), decr=T)>=10)), collapse =" + "), "+",
       paste(names(which(sort(colSums(subset(AWive, TA)[grep("Rdpl", names(subset(AWive, TA)), value = TRUE)]), decr=T)>=10)), collapse =" + "), "+",
@@ -156,19 +156,20 @@ issues.ta.ive<-lapply(TA.Univariate.ive.0$univariate,cochran_ive)
 ####Create final univarite analysis
 TA.Univariate.ive <- nominal(OrderType ~ PV.Time + PV.Move + PV.Discourse + PV.Qual + PV.Position + PV.WantCan + PV.StartFin + TA.speech + TA.cognitive + TA.do + TA.food + TA.money.count + TA.allow + RdplS + RdplW +  auto.vta.6 + auto.vta.3 + auto.vta.5 + auto.vta.1 + auto.na.5.goal + auto.nda.1.goal + auto.vta.4 + auto.na.5.actor + auto.vta.2 + auto.na.7.goal + auto.na.2.goal + auto.na.3.goal + auto.nda.1.actor + auto.na.7.actor + auto.nda.3.goal + auto.nda.3.actor + auto.na.6.goal + auto.na.1.actor + auto.vta.7 + auto.na.1.goal + NA.persons.actor + Sg.actor + auto.na.5.actor + Pron.actor + D.actor + NDA.Relations.actor + Px1Sg.actor + auto.nda.1.actor + Dem.actor + Pers.actor + auto.na.7.actor + Obv.actor + Pl.actor + Prox.actor + auto.nda.3.actor + Incl.actor + auto.na.1.actor + Med.actor + NA.religious.actor + actor.3 + actor.1 + actor.4 + actor.2 + goal.3 + goal.4 + goal.1 + goal.2 + NA.persons.goal + Sg.goal + auto.na.5.goal + Obv.goal + D.goal + NDA.Relations.goal + Pl.goal + auto.nda.1.goal + Pron.goal + Px1Sg.goal + Dem.goal + NA.beast.of.burden.goal + Prox.goal + auto.na.7.goal + auto.na.2.goal + auto.na.3.goal + Px3Sg.goal + Pers.goal + auto.nda.3.goal + Med.goal + NA.food.goal + auto.na.6.goal + Px3Pl.goal + Incl.goal + Px12Pl.goal + auto.na.1.goal, data = subset(AWive, TA))
 
-###Write to file
+####Write to file
 sink(file = 'ive/issues.ta.ive.txt')
 print(issues.ta.ive, max.print = NA)
 sink(NULL)
 
-###Write to file
+####Write to file
 sink(file = 'ive/TAUni-indve.txt')
 print(summary(TA.Univariate.ive), max.print = NA)
 sink(NULL)
-###Make significance table
+
+####Make significance table
 TA.Uni.ive.Sig<- subset(summary(TA.Univariate.ive)$sumry.table, alpha.X2 <0.05)
 
+####Write to file
 sink(file = 'ive/TAUniSig-indve.txt')
 print(TA.Uni.ive.Sig, max.print = NA)
 sink(NULL)
-
