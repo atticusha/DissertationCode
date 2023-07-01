@@ -9,21 +9,21 @@
 ####VAI
 ai.ive.morph.glmer <- glmer(Ind ~ RdplW + Pl.actor + actor.3 + actor.1 + actor.4 + (1|Lemma), data=subset(AWive, AI), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/morph/ive/ai-ModelStats.my.morph.txt')
+sink(file = './ai-ModelStats.my.morph.txt')
 round(print(summary(ai.ive.morph.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ####VTI
 ti.ive.morph.glmer <- glmer(Ind ~ actor.3 + actor.2 + Pl.goal + Px1Sg.goal + (1|Lemma), data=subset(AWive, TI), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/morph/ive/ti-ModelStats.my.morph.txt')
+sink(file = './ti-ModelStats.my.morph.txt')
 round(print(summary(ti.ive.morph.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ####VTA
 ta.ive.morph.glmer <- glmer(Ind ~ Sg.actor + actor.1 + actor.4 + actor.2 + goal.3 + goal.4 + Px3Sg.goal + Px3Pl.goal + (1|Lemma), data=subset(AWive, TA), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/morph/ive/ta-ModelStats.my.morph.txt')
+sink(file = './ta-ModelStats.my.morph.txt')
 round(print(summary(ta.ive.morph.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
