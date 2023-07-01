@@ -1,7 +1,9 @@
 #Multivariate Commands for all Alternations
 ##==========================================================================================================
 
-###Independent vs ê-Conjunct
+###==========================================================================================================
+###Independent vs Conjunct
+###==========================================================================================================
 ####VII
 ii.ive.glmer <- glmer(Ind ~ PV.Time + II.sense + NI.object.actor + Dem.actor + (1|Lemma), data=subset(AWive, II), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
