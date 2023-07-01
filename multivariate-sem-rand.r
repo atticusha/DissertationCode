@@ -6,28 +6,28 @@
 ####VII
 ii.ive.sem.glmer <- glmer(Ind ~ PV.Time + II.sense + NI.object.actor + Dem.actor + (1|Lemma), data=subset(AWive, II), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/sem/ive/ii-ive-ModelStats.my.sem.txt')
+sink(file = './ii-ive-ModelStats.my.sem.txt')
 round(print(summary(ii.ive.sem.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ####VAI
 ai.ive.sem.glmer <- glmer(Ind ~ PV.Time + PV.Move + PV.Qual + PV.StartFin + PV.Discourse + PV.Position + AI.do + AI.state + AI.speech + AI.cooking + AI.reflexive + AI.pray + NA.persons.actor + NA.beast.of.burden.actor + (1|Lemma), data=subset(AWive, AI), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/sem/ive/ai-ive-ModelStats.my.sem.txt')
+sink(file = './ai-ive-ModelStats.my.sem.txt')
 round(print(summary(ai.ive.sem.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ####VTI
 ti.ive.sem.glmer <- glmer(Ind ~ PV.Discourse + TI.do + TI.money.count + NA.persons.actor + NI.natural.force.goal + NI.place.goal + Der.Dim.goal + (1|Lemma), data=subset(AWive, TI), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/sem/ive/ti-ive-ModelStats.my.sem.txt')
+sink(file = './ti-ive-ModelStats.my.sem.txt')
 round(print(summary(ti.ive.sem.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ####VTA
 ta.ive.sem.glmer <- glmer(Ind ~ PV.Time + PV.Move + PV.Discourse + PV.Qual + PV.Position + PV.StartFin + TA.speech + TA.cognitive + TA.do + TA.food + NDA.Relations.actor + NA.persons.goal + (1|Lemma), data=subset(AWive, TA), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
-sink(file = '~/ModelStatistics/sem/ive/ta-ive-ModelStats.my.sem.txt')
+sink(file = './ta-ive-ModelStats.my.sem.txt')
 round(print(summary(ta.ive.sem.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
