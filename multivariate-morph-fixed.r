@@ -9,21 +9,21 @@
 ### VAI
 ai.ive.morph.fixed.glmer <- glm(Ind ~ RdplW + Pl.actor + actor.3 + actor.1 + actor.4, data=subset(AWive, AI), family=binomial)
 
-sink(file = '~/ModelStatistics/morph-fixed/ive/ai-ModelStats.my.morph.txt')
+sink(file = './ai-ModelStats.my.morph.txt')
 round(print(summary(ai.ive.morph.fixed.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ### VTI
 ti.ive.morph.fixed.glmer <- glm(Ind ~ actor.3 + actor.2 + Pl.goal + Px1Sg.goal, data=subset(AWive, TI), family=binomial)
 
-sink(file = '~/ModelStatistics/morph-fixed/ive/ti-ModelStats.my.morph.txt')
+sink(file = './ti-ModelStats.my.morph.txt')
 round(print(summary(ti.ive.morph.fixed.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ### VTA
 ta.ive.morph.fixed.glmer <- glm(Ind ~ Sg.actor + actor.1 + actor.4 + actor.2 + goal.3 + goal.4 + Px3Sg.goal + Px3Pl.goal, data=subset(AWive, TA), family=binomial)
 
-sink(file = '~/ModelStatistics/morph-fixed/ive/ta-ModelStats.my.morph.txt')
+sink(file = './ta-ModelStats.my.morph.txt')
 round(print(summary(ta.ive.morph.fixed.glmer)$coefficients, max.print = NA), 3)
 sink(NULL)
 
