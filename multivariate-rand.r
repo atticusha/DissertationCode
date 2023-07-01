@@ -62,7 +62,7 @@ round(print(summary(ta.indcnj.glmer.rand)$coefficients, max.print = NA), 3)
 sink(NULL)
 
 ###==========================================================================================================
-###Conjunct Type 
+###Conjunct Type: ê-Conjunct
 ###==========================================================================================================
 ####VII
 ii.e.cnjtype.glmer.rand <- glmer(PV.e ~ (1|Lemma), data=subset(AWCnj, II), family=binomial, control=glmerControl(optimizer = "bobyqa"))
@@ -93,8 +93,9 @@ sink(file = 'SummaryTables/man/e-cnj-ta.rand.txt')
 round(print(summary(ta.e.cnjtype.glmer.rand)$coefficients, max.print = NA), 3)
 sink(NULL)
 
-#-------------------------------------------------------
-####VII
+###==========================================================================================================
+###Conjunct Type: kâ-Conjunct
+###==========================================================================================================####VII
 ii.kaa.cnjtype.glmer.rand <- glmer(PV.kaa ~ (1|Lemma), data=subset(AWCnj, II), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
 sink(file = 'SummaryTables/man/kaa-cnj-ii.rand.txt')
@@ -122,7 +123,10 @@ ta.kaa.cnjtype.glmer.rand <- glmer(PV.kaa ~ (1|Lemma), data=subset(AWCnj, TA), f
 sink(file = 'SummaryTables/man/kaa-cnj-ta.rand.txt')
 round(print(summary(ta.kaa.cnjtype.glmer.rand)$coefficients, max.print = NA), 3)
 sink(NULL)
-#-------------------------------------------------------
+
+###==========================================================================================================
+###Conjunct Type: Other Conjunct
+###==========================================================================================================
 ####VII
 ii.other.cnjtype.glmer.rand <- glmer(OtherCnj ~ (1|Lemma), data=subset(AWCnj, II), family=binomial, control=glmerControl(optimizer = "bobyqa"))
 
@@ -150,4 +154,3 @@ ta.other.cnjtype.glmer.rand <- glmer(OtherCnj ~ (1|Lemma), data=subset(AWCnj, TA
 sink(file = 'SummaryTables/man/other-cnj-ta.rand.txt')
 round(print(summary(ta.other.cnjtype.glmer.rand)$coefficients, max.print = NA), 3)
 sink(NULL)
-
