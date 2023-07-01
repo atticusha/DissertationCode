@@ -1,4 +1,4 @@
-# Univariate
+#Univariate Independent vs. ê-Conjunct Alternation
 ##==========================================================================================================
 ## Install packages (polytomous must be installed from source)
 install.packages("~/Downloads/polytomous_0.1.6.tar.gz", repos = NULL, type="source")
