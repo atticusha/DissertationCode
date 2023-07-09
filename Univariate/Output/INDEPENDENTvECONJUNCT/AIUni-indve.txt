@@ -1,0 +1,82 @@
+
+Univariate analysis of categorical variables:
+
+Dependents (2):  OrderType = eCnj, Ind 
+
+Independents (1): PV.Time, PV.Move, PV.Qual, PV.StartFin, PV.Discourse, PV.Position, PV.WantCan, AI.do, AI.state, AI.speech, AI.cooking, AI.reflexive, AI.health, AI.plural, 
+AI.money.count, AI.pray, AI.heat.fire, RdplS, RdplW, auto.vai.2, auto.vai.5, auto.vai.6, auto.vai.12, auto.vai.11, auto.na.5.actor, auto.vai.9, auto.vai.3, 
+auto.nda.1.actor, auto.vai.4, auto.vai.13, auto.na.7.actor, auto.vai.8, auto.vai.1, auto.nda.3.actor, auto.vai.7, auto.vai.10, auto.na.2.actor, auto.na.1.actor, 
+auto.na.3.actor, auto.na.4.actor, NA.persons.actor, Sg.actor, Pron.actor, Pl.actor, D.actor, NDA.Relations.actor, Px1Sg.actor, Pers.actor, Dem.actor, 
+Prox.actor, Incl.actor, Med.actor, NA.beast.of.burden.actor, Obv.actor, NA.food.actor, Px3Sg.actor, Indef.actor, actor.3, actor.1, actor.2, actor.4
+
+
+                            N      alpha.X2        uc.12        uc.21 eCnj Ind
+PV.Time                  1654  4.709695e-10  0.006047113  0.005562811    +   -
+PV.Move                   346  3.561466e-10   0.01664188  0.005965813    +   -
+PV.Qual                   147  0.0007514956  0.009344565  0.001761152    +   -
+PV.StartFin               123  0.0004341569   0.01185842  0.001944054    +   -
+PV.Discourse              116  9.216186e-09   0.03495364  0.005471666    +   -
+PV.Position               109  0.0003358197   0.01368363  0.002039152    +   -
+PV.WantCan                 57     0.1663151  0.003607309 0.0003188574    0   0
+AI.do                    1671  5.911723e-31   0.02095506   0.01935399    +   -
+AI.state                 1578  1.406302e-21    0.0145531    0.0131351    +   -
+AI.speech                1240 2.348254e-203    0.1639127    0.1322687    -   +
+AI.cooking                231  2.736038e-06   0.01260825  0.003357513    +   -
+AI.reflexive              222  1.523535e-08   0.01919203  0.004960252    +   -
+AI.health                  92    0.07776636  0.003892128 0.0005067748    0   0
+AI.plural                  88     0.1487274  0.002765356 0.0003474744    0   0
+AI.money.count             68     0.1801642  0.003032942 0.0003095372    0   0
+AI.pray                    46    0.01169536    0.0146653  0.001086976    +   -
+AI.heat.fire               14    0.07754405   0.02457781  0.000669736    +   -
+RdplS                     130     0.2168237  0.001464496 0.0002507537    0   0
+RdplW                     124  3.555582e-05   0.01638659  0.002703558    +   -
+auto.vai.2               1754  3.76037e-140   0.09526687   0.08960444    -   +
+auto.vai.5                858  2.154771e-15   0.01406119  0.009242066    +   -
+auto.vai.6                761  1.459647e-13   0.01316502  0.008041506    +   -
+auto.vai.12               524   0.003192453   0.00267344  0.001280983    +   -
+auto.vai.11               418  1.608969e-11   0.01668813   0.00684263    +   -
+auto.na.5.actor           411   0.003294646  0.003162486  0.001281423    +   -
+auto.vai.9                251  2.074159e-07    0.0145332  0.004118069    +   -
+auto.vai.3                173   0.005997115  0.005428897  0.001160497    +   -
+auto.nda.1.actor          149     0.2621821  0.001086682 0.0002069676    0   0
+auto.vai.4                139  8.219864e-05    0.0134392  0.002424797    +   -
+auto.vai.13               137  0.0009900326  0.009465413  0.001688596    +   -
+auto.na.7.actor           120     0.3738091 0.0008549365 0.0001374588    0   0
+auto.vai.8                 82     0.0116708  0.008649848  0.001026961    +   -
+auto.vai.1                 72             1 1.599816e-05 1.710166e-06    0   0
+auto.nda.3.actor           51     0.4877205  0.001240129 0.0001000657    0   0
+auto.vai.7                 51   0.002859472   0.01869843  0.001508772    +   -
+auto.vai.10                37    0.05670549   0.01041479 0.0006445706    +   -
+auto.na.2.actor            33     0.2804462  0.004087692 0.0002299881    0   0
+auto.na.1.actor            27     0.5770898  0.001655282 7.872622e-05    0   0
+auto.na.3.actor            26    0.01368965   0.02462575  0.001134644    +   -
+auto.na.4.actor            14     0.8942438 0.0008585851 2.339611e-05    0   0
+NA.persons.actor          554   0.003672497  0.002496455  0.001241837    +   -
+Sg.actor                  410    0.05021359  0.001421048 0.0005748158    +   -
+Pron.actor                300     0.2462356 0.0006525288 0.0002109186    0   0
+Pl.actor                  228   0.005778659  0.004382837  0.001155723    +   -
+D.actor                   200     0.1610687  0.001297288 0.0003098273    0   0
+NDA.Relations.actor       200     0.1610687  0.001297288 0.0003098273    0   0
+Px1Sg.actor               159     0.6538075 0.0001983125 3.972105e-05    0   0
+Pers.actor                150     0.3953853 0.0006466746 0.0001238062    0   0
+Dem.actor                 143      0.287216   0.00102107 0.0001883504    0   0
+Prox.actor                 87     0.9654687 2.653157e-05 3.303354e-06    0   0
+Incl.actor                 72     0.3294634   0.00160763 0.0001718519    0   0
+Med.actor                  55     0.1626133  0.003980947 0.0003417465    0   0
+NA.beast.of.burden.actor   46    0.02640932   0.01139565 0.0008446335    +   -
+Obv.actor                  39   0.005468354   0.02092582  0.001352987    +   -
+NA.food.actor              26    0.09572782   0.01141343 0.0005258796    0   0
+Px3Sg.actor                21    0.06726897   0.01698087 0.0006533887    +   -
+Indef.actor                13     0.5103831  0.004763249 0.0001218166    0   0
+actor.3                  3109   5.31869e-21   0.01262959   0.01261789    -   +
+actor.1                  1551   0.001755009  0.001573761  0.001410165    +   -
+actor.2                   144     0.9200004 2.634749e-05 4.886612e-06    0   0
+actor.4                   138  6.287493e-09   0.03054933  0.005480942    +   -
+
+
+Association measures:
+  statistic.12 ~ statistic(1|2) ~ statistic(independent|dependent) [ ~ statistic(R|C) ]
+  statistic.21 ~ statustic(2|1) ~ statistic(dependent|independent) [ ~ statistic(C|R) ]
+
+Posthoc cellwise chi-squared analysis:  std.pearson.residuals.sign 
+
