@@ -1,5 +1,34 @@
 #MODEL STATISTICS
 
+## Ind v. Cnj
+ii.indcnj.observed.my.rand <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ii.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ii.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
+table(ii.indcnj.observed.my.rand,ii.indcnj.predicted.my.rand)
+ii.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ii.indcnj.glmer.rand)), 1-as.vector(fitted(ii.indcnj.glmer.rand)))
+colnames(ii.indcnj.p.values.my.rand) <- c("Ind","eCnj")
+ii.indcnj.ModelStats.my.rand<- model.statistics(ii.indcnj.observed.my.rand, ii.indcnj.predicted.my.rand, ii.indcnj.p.values.my.rand)
+
+ai.indcnj.observed.my.rand <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ai.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ai.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
+table(ai.indcnj.observed.my.rand,ai.indcnj.predicted.my.rand)
+ai.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ai.indcnj.glmer.rand)), 1-as.vector(fitted(ai.indcnj.glmer.rand)))
+colnames(ai.indcnj.p.values.my.rand) <- c("Ind","eCnj")
+ai.indcnj.ModelStats.my.rand<- model.statistics(ai.indcnj.observed.my.rand, ai.indcnj.predicted.my.rand, ai.indcnj.p.values.my.rand)
+
+ti.indcnj.observed.my.rand <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ti.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ti.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
+table(ti.indcnj.observed.my.rand,ti.indcnj.predicted.my.rand)
+ti.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ti.indcnj.glmer.rand)), 1-as.vector(fitted(ti.indcnj.glmer.rand)))
+colnames(ti.indcnj.p.values.my.rand) <- c("Ind","eCnj")
+ti.indcnj.ModelStats.my.rand<- model.statistics(ti.indcnj.observed.my.rand, ti.indcnj.predicted.my.rand, ti.indcnj.p.values.my.rand)
+
+ta.indcnj.observed.my.rand <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ta.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ta.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
+table(ta.indcnj.observed.my.rand,ta.indcnj.predicted.my.rand)
+ta.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ta.indcnj.glmer.rand)), 1-as.vector(fitted(ta.indcnj.glmer.rand)))
+colnames(ta.indcnj.p.values.my.rand) <- c("Ind","eCnj")
+ta.indcnj.ModelStats.my.rand<- model.statistics(ta.indcnj.observed.my.rand, ta.indcnj.predicted.my.rand, ta.indcnj.p.values.my.rand)
+
 ### Ind v. eCnj
 ii.ive.observed.my.rand <- ifelse(subset(AWive, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
 ii.ive.predicted.my.rand <- ifelse(as.vector(fitted(ii.ive.glmer.rand))>0.5, "Ind", "eCnj")
@@ -29,31 +58,7 @@ ta.ive.p.values.my.rand <- cbind(as.vector(fitted(ta.ive.glmer.rand)), 1-as.vect
 colnames(ta.ive.p.values.my.rand) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.rand<- model.statistics(ta.ive.observed.my.rand, ta.ive.predicted.my.rand, ta.ive.p.values.my.rand)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. eCnj/ii-ive-ModelStats.my.rand.txt')
-print(ii.ive.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. eCnj/ai-ive-ModelStats.my.rand.txt')
-print(ai.ive.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. eCnj/ti-ive-ModelStats.my.rand.txt')
-print(ti.ive.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. eCnj/ta-ive-ModelStats.my.rand.txt')
-print(ta.ive.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-
-
-
-
-
-
-
-
-#================================================
-### eCnj v. kaaCnj v. OtherCnj
-#================================================
-
+## Cnj Type
 ii.all.cnjtypes.observed.my.rand <- subset(AWCnj, II, OrderType, drop=TRUE)
 # Create an empty vector to store the column names
 ii.all.cnjtypes.p.values.my.rand <-cbind(fitted(ii.e.cnjtype.glmer.rand), fitted(ii.kaa.cnjtype.glmer.rand), fitted(ii.other.cnjtype.glmer.rand))
@@ -114,65 +119,5 @@ for (i in 1:nrow(ta.all.cnjtypes.p.values.my.rand)) {
 table(ta.all.cnjtypes.observed.my.rand,ta.all.cnjtypes.predicted.my.rand)
 ta.all.cnjtypes.ModelStats.my.rand<- model.statistics(ta.all.cnjtypes.observed.my.rand, ta.all.cnjtypes.predicted.my.rand, ta.all.cnjtypes.p.values.my.rand)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Cnj Type/ii-cnjtypes-ModelStats.my.rand.txt')
-print(ii.all.cnjtypes.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Cnj Type/ai-cnjtypes-ModelStats.my.rand.txt')
-print(ai.all.cnjtypes.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Cnj Type/ti-cnjtypes-ModelStats.my.rand.txt')
-print(ti.all.cnjtypes.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Cnj Type/ta-cnjtypes-ModelStats.my.rand.txt')
-print(ta.all.cnjtypes.ModelStats.my.rand, max.print = NA)
-sink(NULL)
 
-
-
-#================================================
-### Ind v. Cnj
-#================================================
-
-ii.indcnj.observed.my.rand <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ii.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ii.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
-table(ii.indcnj.observed.my.rand,ii.indcnj.predicted.my.rand)
-ii.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ii.indcnj.glmer.rand)), 1-as.vector(fitted(ii.indcnj.glmer.rand)))
-colnames(ii.indcnj.p.values.my.rand) <- c("Ind","eCnj")
-ii.indcnj.ModelStats.my.rand<- model.statistics(ii.indcnj.observed.my.rand, ii.indcnj.predicted.my.rand, ii.indcnj.p.values.my.rand)
-
-ai.indcnj.observed.my.rand <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ai.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ai.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
-table(ai.indcnj.observed.my.rand,ai.indcnj.predicted.my.rand)
-ai.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ai.indcnj.glmer.rand)), 1-as.vector(fitted(ai.indcnj.glmer.rand)))
-colnames(ai.indcnj.p.values.my.rand) <- c("Ind","eCnj")
-ai.indcnj.ModelStats.my.rand<- model.statistics(ai.indcnj.observed.my.rand, ai.indcnj.predicted.my.rand, ai.indcnj.p.values.my.rand)
-
-ti.indcnj.observed.my.rand <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ti.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ti.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
-table(ti.indcnj.observed.my.rand,ti.indcnj.predicted.my.rand)
-ti.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ti.indcnj.glmer.rand)), 1-as.vector(fitted(ti.indcnj.glmer.rand)))
-colnames(ti.indcnj.p.values.my.rand) <- c("Ind","eCnj")
-ti.indcnj.ModelStats.my.rand<- model.statistics(ti.indcnj.observed.my.rand, ti.indcnj.predicted.my.rand, ti.indcnj.p.values.my.rand)
-
-ta.indcnj.observed.my.rand <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ta.indcnj.predicted.my.rand <- ifelse(as.vector(fitted(ta.indcnj.glmer.rand))>0.5, "Ind", "eCnj")
-table(ta.indcnj.observed.my.rand,ta.indcnj.predicted.my.rand)
-ta.indcnj.p.values.my.rand <- cbind(as.vector(fitted(ta.indcnj.glmer.rand)), 1-as.vector(fitted(ta.indcnj.glmer.rand)))
-colnames(ta.indcnj.p.values.my.rand) <- c("Ind","eCnj")
-ta.indcnj.ModelStats.my.rand<- model.statistics(ta.indcnj.observed.my.rand, ta.indcnj.predicted.my.rand, ta.indcnj.p.values.my.rand)
-
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. Cnj/ii-indcnj-ModelStats.my.rand.txt')
-print(ii.indcnj.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. Cnj/ai-indcnj-ModelStats.my.rand.txt')
-print(ai.indcnj.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. Cnj/ti-indcnj-ModelStats.my.rand.txt')
-print(ti.indcnj.ModelStats.my.rand, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Lem/Ind vs. Cnj/ta-indcnj-ModelStats.my.rand.txt')
-print(ta.indcnj.ModelStats.my.rand, max.print = NA)
-sink(NULL)
 
