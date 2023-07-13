@@ -1,0 +1,20 @@
+                        Estimate Std. Error    z value     Pr(>|z|)
+(Intercept)           1.33918588  0.1158508 11.5595711 6.603782e-31
+PV.WantCanTRUE       -1.19379165  0.3321806 -3.5938033 3.258859e-04
+PV.PositionTRUE       2.38160827  0.7590245  3.1377225 1.702660e-03
+TI.speechTRUE        -0.72981191  0.3501487 -2.0842912 3.713369e-02
+NA.persons.actorTRUE -0.30458546  0.1954933 -1.5580352 1.192249e-01
+NI.object.goalTRUE    0.03240991  0.1629675  0.1988734 8.423618e-01
+Prox.goalTRUE        -1.04428757  0.2583388 -4.0423181 5.292536e-05
+NI.nominal.goalTRUE  -0.97544267  0.2464324 -3.9582572 7.549862e-05
+Med.goalTRUE         -0.48009187  0.2865087 -1.6756624 9.380435e-02
+                     Estimate Std. Error z value Pr(>|z|)
+(Intercept)             1.339      0.116  11.560    0.000
+PV.WantCanTRUE         -1.194      0.332  -3.594    0.000
+PV.PositionTRUE         2.382      0.759   3.138    0.002
+TI.speechTRUE          -0.730      0.350  -2.084    0.037
+NA.persons.actorTRUE   -0.305      0.195  -1.558    0.119
+NI.object.goalTRUE      0.032      0.163   0.199    0.842
+Prox.goalTRUE          -1.044      0.258  -4.042    0.000
+NI.nominal.goalTRUE    -0.975      0.246  -3.958    0.000
+Med.goalTRUE           -0.480      0.287  -1.676    0.094

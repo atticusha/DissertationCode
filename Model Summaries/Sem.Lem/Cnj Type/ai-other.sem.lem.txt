@@ -1,0 +1,22 @@
+                           Estimate Std. Error     z value     Pr(>|z|)
+(Intercept)             -3.01029337  0.1835820 -16.3975388 1.991441e-60
+PV.QualTRUE             -1.70806191  0.7335779  -2.3283987 1.989095e-02
+PV.DiscourseTRUE        -0.41255003  0.4115677  -1.0023868 3.161568e-01
+PV.PositionTRUE         -1.01530008  0.5415347  -1.8748570 6.081240e-02
+PV.WantCanTRUE           1.97016316  0.4073570   4.8364533 1.321763e-06
+AI.doTRUE               -0.07670010  0.2006148  -0.3823253 7.022201e-01
+AI.cookingTRUE          -0.02719354  0.4590091  -0.0592440 9.527578e-01
+AI.healthTRUE            1.23204703  0.5055644   2.4369737 1.481076e-02
+NA.persons.actorTRUE    -0.46119865  0.2222603  -2.0750384 3.798297e-02
+NDA.Relations.actorTRUE -2.56337274  1.0157879  -2.5235314 1.161827e-02
+                        Estimate Std. Error z value Pr(>|z|)
+(Intercept)               -3.010      0.184 -16.398    0.000
+PV.QualTRUE               -1.708      0.734  -2.328    0.020
+PV.DiscourseTRUE          -0.413      0.412  -1.002    0.316
+PV.PositionTRUE           -1.015      0.542  -1.875    0.061
+PV.WantCanTRUE             1.970      0.407   4.836    0.000
+AI.doTRUE                 -0.077      0.201  -0.382    0.702
+AI.cookingTRUE            -0.027      0.459  -0.059    0.953
+AI.healthTRUE              1.232      0.506   2.437    0.015
+NA.persons.actorTRUE      -0.461      0.222  -2.075    0.038
+NDA.Relations.actorTRUE   -2.563      1.016  -2.524    0.012

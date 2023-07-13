@@ -1,0 +1,34 @@
+                             Estimate Std. Error    z value     Pr(>|z|)
+(Intercept)               -0.19856954 0.12813617 -1.5496760 1.212193e-01
+PV.DiscourseTRUE          -2.06356177 0.44646263 -4.6220258 3.800108e-06
+TI.doTRUE                 -0.76639779 0.15042029 -5.0950426 3.486629e-07
+TI.money.countTRUE        -1.91446278 0.81449165 -2.3505002 1.874820e-02
+NA.persons.actorTRUE       0.49516834 0.15283433  3.2399026 1.195705e-03
+actor.3TRUE               -0.79277609 0.09696891 -8.1755701 2.944703e-16
+actor.2TRUE                0.37169714 0.15709803  2.3660203 1.798046e-02
+Sg.goalTRUE               -0.10227392 0.11261768 -0.9081515 3.637982e-01
+Pl.goalTRUE                0.02094381 0.20722551  0.1010677 9.194967e-01
+NI.nominal.goalTRUE       -0.75246861 0.29256762 -2.5719477 1.011282e-02
+NI.natural.force.goalTRUE -0.21611370 0.35885019 -0.6022393 5.470148e-01
+NDI.Body.goalTRUE         -1.05921640 0.51175348 -2.0697786 3.847308e-02
+Px3Sg.goalTRUE             0.79776649 0.57999424  1.3754731 1.689848e-01
+NI.place.goalTRUE         -1.44131405 0.64678515 -2.2284279 2.585200e-02
+Der.Dim.goalTRUE          -1.28696631 0.80867449 -1.5914516 1.115080e-01
+Px1Sg.goalTRUE             1.61255388 0.57476481  2.8055891 5.022469e-03
+                          Estimate Std. Error z value Pr(>|z|)
+(Intercept)                 -0.199      0.128  -1.550    0.121
+PV.DiscourseTRUE            -2.064      0.446  -4.622    0.000
+TI.doTRUE                   -0.766      0.150  -5.095    0.000
+TI.money.countTRUE          -1.914      0.814  -2.351    0.019
+NA.persons.actorTRUE         0.495      0.153   3.240    0.001
+actor.3TRUE                 -0.793      0.097  -8.176    0.000
+actor.2TRUE                  0.372      0.157   2.366    0.018
+Sg.goalTRUE                 -0.102      0.113  -0.908    0.364
+Pl.goalTRUE                  0.021      0.207   0.101    0.919
+NI.nominal.goalTRUE         -0.752      0.293  -2.572    0.010
+NI.natural.force.goalTRUE   -0.216      0.359  -0.602    0.547
+NDI.Body.goalTRUE           -1.059      0.512  -2.070    0.038
+Px3Sg.goalTRUE               0.798      0.580   1.375    0.169
+NI.place.goalTRUE           -1.441      0.647  -2.228    0.026
+Der.Dim.goalTRUE            -1.287      0.809  -1.591    0.112
+Px1Sg.goalTRUE               1.613      0.575   2.806    0.005

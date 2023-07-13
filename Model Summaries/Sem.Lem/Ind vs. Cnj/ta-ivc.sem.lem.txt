@@ -1,0 +1,30 @@
+                          Estimate Std. Error    z value     Pr(>|z|)
+(Intercept)             -0.3955284 0.47395565 -0.8345261 4.039846e-01
+PV.TimeTRUE             -0.4079625 0.09265166 -4.4031857 1.066728e-05
+PV.MoveTRUE             -0.6352019 0.21654488 -2.9333502 3.353254e-03
+PV.DiscourseTRUE        -0.7192516 0.36126325 -1.9909349 4.648804e-02
+PV.QualTRUE             -0.1305973 0.33647436 -0.3881343 6.979166e-01
+PV.PositionTRUE         -0.9802778 0.41139040 -2.3828407 1.717963e-02
+TA.speechTRUE           -0.3516050 0.51284497 -0.6855970 4.929673e-01
+TA.cognitiveTRUE        -0.1762391 0.48870227 -0.3606268 7.183784e-01
+TA.doTRUE               -0.6917214 0.48882915 -1.4150577 1.570516e-01
+TA.foodTRUE             -1.6774640 0.64558695 -2.5983548 9.367164e-03
+TA.money.countTRUE      -0.5803468 0.64478234 -0.9000662 3.680850e-01
+NA.persons.actorTRUE    -0.1816057 0.18156674 -1.0002143 3.172068e-01
+NDA.Relations.actorTRUE -0.6551885 0.28989039 -2.2601249 2.381350e-02
+NA.persons.goalTRUE     -0.2347903 0.13331257 -1.7612018 7.820425e-02
+                        Estimate Std. Error z value Pr(>|z|)
+(Intercept)               -0.396      0.474  -0.835    0.404
+PV.TimeTRUE               -0.408      0.093  -4.403    0.000
+PV.MoveTRUE               -0.635      0.217  -2.933    0.003
+PV.DiscourseTRUE          -0.719      0.361  -1.991    0.046
+PV.QualTRUE               -0.131      0.336  -0.388    0.698
+PV.PositionTRUE           -0.980      0.411  -2.383    0.017
+TA.speechTRUE             -0.352      0.513  -0.686    0.493
+TA.cognitiveTRUE          -0.176      0.489  -0.361    0.718
+TA.doTRUE                 -0.692      0.489  -1.415    0.157
+TA.foodTRUE               -1.677      0.646  -2.598    0.009
+TA.money.countTRUE        -0.580      0.645  -0.900    0.368
+NA.persons.actorTRUE      -0.182      0.182  -1.000    0.317
+NDA.Relations.actorTRUE   -0.655      0.290  -2.260    0.024
+NA.persons.goalTRUE       -0.235      0.133  -1.761    0.078

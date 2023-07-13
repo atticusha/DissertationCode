@@ -1,0 +1,26 @@
+                            Estimate Std. Error    z value     Pr(>|z|)
+(Intercept)                0.2699763 0.07281921  3.7074874 2.093258e-04
+PV.DiscourseTRUE          -1.9805560 0.44293320 -4.4714553 7.768909e-06
+TI.doTRUE                 -0.8861197 0.09212918 -9.6182309 6.697306e-22
+TI.money.countTRUE        -1.9756574 0.77797340 -2.5394922 1.110135e-02
+NA.persons.actorTRUE       0.6719811 0.15868819  4.2346008 2.289581e-05
+actor.3TRUE               -0.7501641 0.09502491 -7.8943939 2.917294e-15
+actor.2TRUE                0.8384323 0.17472800  4.7985000 1.598583e-06
+Pl.goalTRUE               -0.2024455 0.19729322 -1.0261147 3.048375e-01
+NI.natural.force.goalTRUE -0.3021941 0.34532698 -0.8750955 3.815220e-01
+NI.place.goalTRUE         -1.5402333 0.63485074 -2.4261345 1.526061e-02
+Der.Dim.goalTRUE          -1.3937052 0.76162118 -1.8299192 6.726202e-02
+Px1Sg.goalTRUE             1.1733526 0.58213359  2.0156071 4.384108e-02
+                          Estimate Std. Error z value Pr(>|z|)
+(Intercept)                  0.270      0.073   3.707    0.000
+PV.DiscourseTRUE            -1.981      0.443  -4.471    0.000
+TI.doTRUE                   -0.886      0.092  -9.618    0.000
+TI.money.countTRUE          -1.976      0.778  -2.539    0.011
+NA.persons.actorTRUE         0.672      0.159   4.235    0.000
+actor.3TRUE                 -0.750      0.095  -7.894    0.000
+actor.2TRUE                  0.838      0.175   4.799    0.000
+Pl.goalTRUE                 -0.202      0.197  -1.026    0.305
+NI.natural.force.goalTRUE   -0.302      0.345  -0.875    0.382
+NI.place.goalTRUE           -1.540      0.635  -2.426    0.015
+Der.Dim.goalTRUE            -1.394      0.762  -1.830    0.067
+Px1Sg.goalTRUE               1.173      0.582   2.016    0.044

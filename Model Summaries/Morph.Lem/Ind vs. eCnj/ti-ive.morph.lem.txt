@@ -1,0 +1,12 @@
+                 Estimate Std. Error   z value     Pr(>|z|)
+(Intercept)    -0.4814943  0.1119066 -4.302643 1.687728e-05
+actor.3TRUE    -0.7424273  0.1028297 -7.219973 5.199800e-13
+actor.2TRUE     0.8795649  0.1917939  4.585990 4.518409e-06
+Pl.goalTRUE    -0.2364375  0.1973981 -1.197770 2.310065e-01
+Px1Sg.goalTRUE  1.0885347  0.6252664  1.740913 8.169875e-02
+               Estimate Std. Error z value Pr(>|z|)
+(Intercept)      -0.481      0.112  -4.303    0.000
+actor.3TRUE      -0.742      0.103  -7.220    0.000
+actor.2TRUE       0.880      0.192   4.586    0.000
+Pl.goalTRUE      -0.236      0.197  -1.198    0.231
+Px1Sg.goalTRUE    1.089      0.625   1.741    0.082

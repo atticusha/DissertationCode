@@ -1,0 +1,12 @@
+                      Estimate Std. Error    z value     Pr(>|z|)
+(Intercept)         -1.7007129  0.2488565 -6.8341105 8.251538e-12
+II.senseTRUE        -0.4793417  0.3495386 -1.3713555 1.702642e-01
+II.natural.landTRUE  1.6775081  0.2936445  5.7127171 1.111864e-08
+II.weatherTRUE       1.3524350  0.3062633  4.4159232 1.005798e-05
+NI.object.actorTRUE -0.2954985  0.3283533 -0.8999409 3.681517e-01
+                    Estimate Std. Error z value Pr(>|z|)
+(Intercept)           -1.701      0.249  -6.834    0.000
+II.senseTRUE          -0.479      0.350  -1.371    0.170
+II.natural.landTRUE    1.678      0.294   5.713    0.000
+II.weatherTRUE         1.352      0.306   4.416    0.000
+NI.object.actorTRUE   -0.295      0.328  -0.900    0.368
