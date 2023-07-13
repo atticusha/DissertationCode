@@ -29,24 +29,6 @@ ta.ive.p.values.my.fixed <- cbind(as.vector(fitted(ta.ive.glm.fixed)), 1-as.vect
 colnames(ta.ive.p.values.my.fixed) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.fixed<- model.statistics(ta.ive.observed.my.fixed, ta.ive.predicted.my.fixed, ta.ive.p.values.my.fixed)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. eCnj/ii-ive-ModelStats.my.fixed.txt')
-print(ii.ive.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. eCnj/ai-ive-ModelStats.my.fixed.txt')
-print(ai.ive.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. eCnj/ti-ive-ModelStats.my.fixed.txt')
-print(ti.ive.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. eCnj/ta-ive-ModelStats.my.fixed.txt')
-print(ta.ive.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-
-
-
-
-
 
 
 
@@ -120,21 +102,6 @@ for (i in 1:nrow(ta.all.cnjtypes.p.values.my.fixed)) {
 table(ta.all.cnjtypes.observed.my.fixed,ta.all.cnjtypes.predicted.my.fixed)
 ta.all.cnjtypes.ModelStats.my.fixed<- model.statistics(ta.all.cnjtypes.observed.my.fixed, ta.all.cnjtypes.predicted.my.fixed, ta.all.cnjtypes.p.values.my.fixed)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Cnj Type/ii-all-cnjtypes-ModelStats.my.fixed.txt')
-print(ii.all.cnjtypes.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Cnj Type/ai-all-cnjtypes-ModelStats.my.fixed.txt')
-print(ai.all.cnjtypes.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Cnj Type/ti-all-cnjtypes-ModelStats.my.fixed.txt')
-print(ti.all.cnjtypes.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Cnj Type/ta-all-cnjtypes-ModelStats.my.fixed.txt')
-print(ta.all.cnjtypes.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-
-
 
 #================================================
 ### Ind v. Cnj
@@ -168,17 +135,4 @@ ta.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ta.indcnj.glm.fixed)), 1-a
 colnames(ta.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
 ta.indcnj.ModelStats.my.fixed<- model.statistics(ta.indcnj.observed.my.fixed, ta.indcnj.predicted.my.fixed, ta.indcnj.p.values.my.fixed)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. Cnj/ii-indcnj-ModelStats.my.fixed.txt')
-print(ii.indcnj.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. Cnj/ai-indcnj-ModelStats.my.fixed.txt')
-print(ai.indcnj.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. Cnj/ti-indcnj-ModelStats.my.fixed.txt')
-print(ti.indcnj.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Morph/Ind vs. Cnj/ta-indcnj-ModelStats.my.fixed.txt')
-print(ta.indcnj.ModelStats.my.fixed, max.print = NA)
-sink(NULL)
 
