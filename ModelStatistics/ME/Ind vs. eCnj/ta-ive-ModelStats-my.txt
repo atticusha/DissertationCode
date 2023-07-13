@@ -1,0 +1,53 @@
+$loglikelihood.null
+[1] -1663.165
+
+$loglikelihood.model
+[1] -1301.796
+
+$deviance.null
+[1] 3326.33
+
+$deviance.model
+[1] 2603.591
+
+$R2.likelihood
+[1] 0.2172781
+
+$R2.nagelkerke
+[1] 0.3454405
+
+$crosstable
+      
+       eCnj  Ind
+  eCnj 1083  269
+  Ind   409  662
+
+$accuracy
+[1] 0.7201816
+
+$recall.predicted
+     eCnj       Ind 
+0.8010355 0.6181139 
+
+$precision.predicted
+     eCnj       Ind 
+0.7258713 0.7110634 
+
+$lambda.prediction
+[1] 0.3669468
+
+$tau.classification
+[1] 0.4327337
+
+$d.lambda.prediction
+[1] 16.0763
+
+$d.tau.classification
+[1] 21.01629
+
+$p.lambda.prediction
+[1] 0
+
+$p.tau.classification
+[1] 0
+
