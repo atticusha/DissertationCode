@@ -29,23 +29,6 @@ ta.ive.p.values.my.sem <- cbind(as.vector(fitted(ta.ive.sem.glmer)), 1-as.vector
 colnames(ta.ive.p.values.my.sem) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.sem<- model.statistics(ta.ive.observed.my.sem, ta.ive.predicted.my.sem, ta.ive.p.values.my.sem)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. eCnj/ii-ive-ModelStats.my.sem.txt')
-print(ii.ive.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. eCnj/ai-ive-ModelStats.my.sem.txt')
-print(ai.ive.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. eCnj/ti-ive-ModelStats.my.sem.txt')
-print(ti.ive.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. eCnj/ta-ive-ModelStats.my.sem.txt')
-print(ta.ive.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-
-
-
-
 
 
 
@@ -118,20 +101,6 @@ for (i in 1:nrow(ta.all.cnjtypes.p.values.my.sem)) {
 table(ta.all.cnjtypes.observed.my.sem,ta.all.cnjtypes.predicted.my.sem)
 ta.all.cnjtypes.ModelStats.my.sem<- model.statistics(ta.all.cnjtypes.observed.my.sem, ta.all.cnjtypes.predicted.my.sem, ta.all.cnjtypes.p.values.my.sem)
 
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Cnj Type/ii-cnjtype-ModelStats.my.sem.txt')
-print(ii.all.cnjtypes.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Cnj Type/ai-cnjtype-ModelStats.my.sem.txt')
-print(ai.all.cnjtypes.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Cnj Type/ti-cnjtype-ModelStats.my.sem.txt')
-print(ti.all.cnjtypes.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Cnj Type/ta-cnjtype-ModelStats.my.sem.txt')
-print(ta.all.cnjtypes.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-
 
 #================================================
 ### Ind v. Cnj
@@ -164,23 +133,4 @@ table(ta.indcnj.observed.my.sem,ta.indcnj.predicted.my.sem)
 ta.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ta.indcnj.sem.glmer)), 1-as.vector(fitted(ta.indcnj.sem.glmer)))
 colnames(ta.indcnj.p.values.my.sem) <- c("Ind","eCnj")
 ta.indcnj.ModelStats.my.sem<- model.statistics(ta.indcnj.observed.my.sem, ta.indcnj.predicted.my.sem, ta.indcnj.p.values.my.sem)
-
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. Cnj/ii-indcnj-ModelStats.my.sem.txt')
-print(ii.indcnj.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. Cnj/ai-indcnj-ModelStats.my.sem.txt')
-print(ai.indcnj.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. Cnj/ti-indcnj-ModelStats.my.sem.txt')
-print(ti.indcnj.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Sem.Lem/Ind vs. Cnj/ta-indcnj-ModelStats.my.sem.txt')
-print(ta.indcnj.ModelStats.my.sem, max.print = NA)
-sink(NULL)
-
-
-
-
-
 
