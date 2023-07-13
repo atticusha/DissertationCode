@@ -1,4 +1,32 @@
 #MODEL STATISTICS
+## Ind v. Cnj
+ii.indcnj.observed.my.sem <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ii.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ii.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
+table(ii.indcnj.observed.my.sem,ii.indcnj.predicted.my.sem)
+ii.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ii.indcnj.sem.glmer)), 1-as.vector(fitted(ii.indcnj.sem.glmer)))
+colnames(ii.indcnj.p.values.my.sem) <- c("Ind","eCnj")
+ii.indcnj.ModelStats.my.sem<- model.statistics(ii.indcnj.observed.my.sem, ii.indcnj.predicted.my.sem, ii.indcnj.p.values.my.sem)
+
+ai.indcnj.observed.my.sem <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ai.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ai.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
+table(ai.indcnj.observed.my.sem,ai.indcnj.predicted.my.sem)
+ai.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ai.indcnj.sem.glmer)), 1-as.vector(fitted(ai.indcnj.sem.glmer)))
+colnames(ai.indcnj.p.values.my.sem) <- c("Ind","eCnj")
+ai.indcnj.ModelStats.my.sem<- model.statistics(ai.indcnj.observed.my.sem, ai.indcnj.predicted.my.sem, ai.indcnj.p.values.my.sem)
+
+ti.indcnj.observed.my.sem <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ti.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ti.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
+table(ti.indcnj.observed.my.sem,ti.indcnj.predicted.my.sem)
+ti.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ti.indcnj.sem.glmer)), 1-as.vector(fitted(ti.indcnj.sem.glmer)))
+colnames(ti.indcnj.p.values.my.sem) <- c("Ind","eCnj")
+ti.indcnj.ModelStats.my.sem<- model.statistics(ti.indcnj.observed.my.sem, ti.indcnj.predicted.my.sem, ti.indcnj.p.values.my.sem)
+
+ta.indcnj.observed.my.sem <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ta.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ta.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
+table(ta.indcnj.observed.my.sem,ta.indcnj.predicted.my.sem)
+ta.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ta.indcnj.sem.glmer)), 1-as.vector(fitted(ta.indcnj.sem.glmer)))
+colnames(ta.indcnj.p.values.my.sem) <- c("Ind","eCnj")
+ta.indcnj.ModelStats.my.sem<- model.statistics(ta.indcnj.observed.my.sem, ta.indcnj.predicted.my.sem, ta.indcnj.p.values.my.sem)
 
 ## Ind v. eCnj
 ii.ive.observed.my.sem <- ifelse(subset(AWive, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
@@ -28,38 +56,6 @@ table(ta.ive.observed.my.sem,ta.ive.predicted.my.sem)
 ta.ive.p.values.my.sem <- cbind(as.vector(fitted(ta.ive.sem.glmer)), 1-as.vector(fitted(ta.ive.sem.glmer)))
 colnames(ta.ive.p.values.my.sem) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.sem<- model.statistics(ta.ive.observed.my.sem, ta.ive.predicted.my.sem, ta.ive.p.values.my.sem)
-
-
-
-
-## Ind v. eCnj
-ii.indcnj.observed.my.sem <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ii.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ii.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
-table(ii.indcnj.observed.my.sem,ii.indcnj.predicted.my.sem)
-ii.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ii.indcnj.sem.glmer)), 1-as.vector(fitted(ii.indcnj.sem.glmer)))
-colnames(ii.indcnj.p.values.my.sem) <- c("Ind","eCnj")
-ii.indcnj.ModelStats.my.sem<- model.statistics(ii.indcnj.observed.my.sem, ii.indcnj.predicted.my.sem, ii.indcnj.p.values.my.sem)
-
-ai.indcnj.observed.my.sem <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ai.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ai.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
-table(ai.indcnj.observed.my.sem,ai.indcnj.predicted.my.sem)
-ai.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ai.indcnj.sem.glmer)), 1-as.vector(fitted(ai.indcnj.sem.glmer)))
-colnames(ai.indcnj.p.values.my.sem) <- c("Ind","eCnj")
-ai.indcnj.ModelStats.my.sem<- model.statistics(ai.indcnj.observed.my.sem, ai.indcnj.predicted.my.sem, ai.indcnj.p.values.my.sem)
-
-ti.indcnj.observed.my.sem <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ti.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ti.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
-table(ti.indcnj.observed.my.sem,ti.indcnj.predicted.my.sem)
-ti.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ti.indcnj.sem.glmer)), 1-as.vector(fitted(ti.indcnj.sem.glmer)))
-colnames(ti.indcnj.p.values.my.sem) <- c("Ind","eCnj")
-ti.indcnj.ModelStats.my.sem<- model.statistics(ti.indcnj.observed.my.sem, ti.indcnj.predicted.my.sem, ti.indcnj.p.values.my.sem)
-
-ta.indcnj.observed.my.sem <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ta.indcnj.predicted.my.sem <- ifelse(as.vector(fitted(ta.indcnj.sem.glmer))>0.5, "Ind", "eCnj")
-table(ta.indcnj.observed.my.sem,ta.indcnj.predicted.my.sem)
-ta.indcnj.p.values.my.sem <- cbind(as.vector(fitted(ta.indcnj.sem.glmer)), 1-as.vector(fitted(ta.indcnj.sem.glmer)))
-colnames(ta.indcnj.p.values.my.sem) <- c("Ind","eCnj")
-ta.indcnj.ModelStats.my.sem<- model.statistics(ta.indcnj.observed.my.sem, ta.indcnj.predicted.my.sem, ta.indcnj.p.values.my.sem)
 
 
 ## Cnj Type
