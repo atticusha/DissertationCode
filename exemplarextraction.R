@@ -317,34 +317,34 @@ ta.cnjtype.other.exemplar<-subset(p.ta.AWCnj.other, ( p.val < 0.5 & OtherCnj==FA
 
 # SORT =====================
 ## IVE ===========================
-write.csv(ii.awive.exemplar[with(ii.awive.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ii.awive.ex.csv")
-write.csv(ai.awive.exemplar[with(ai.awive.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/tstai.awive.ex.csv")
-write.csv(ti.awive.exemplar[with(ti.awive.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/tstti.awive.ex.csv")
-write.csv(ta.awive.exemplar[with(ta.awive.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/tstta.awive.ex.csv")
+write.csv(ii.awive.exemplar[with(ii.awive.exemplar, order(cluster,p.val)),][myvars],"./ii.awive.ex.csv")
+write.csv(ai.awive.exemplar[with(ai.awive.exemplar, order(cluster,p.val)),][myvars],"./tstai.awive.ex.csv")
+write.csv(ti.awive.exemplar[with(ti.awive.exemplar, order(cluster,p.val)),][myvars],"./tstti.awive.ex.csv")
+write.csv(ta.awive.exemplar[with(ta.awive.exemplar, order(cluster,p.val)),][myvars],"./tstta.awive.ex.csv")
 
 
 ## IVC ==========================
-write.csv(ii.awivc.exemplar[with(ii.awivc.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ii.awivc.ex.csv")
-write.csv(ai.awivc.exemplar[with(ai.awivc.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ai.awivc.ex.csv")
-write.csv(ti.awivc.exemplar[with(ti.awivc.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ti.awivc.ex.csv")
-write.csv(ta.awivc.exemplar[with(ta.awivc.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ta.awivc.ex.csv")
+write.csv(ii.awivc.exemplar[with(ii.awivc.exemplar, order(cluster,p.val)),][myvars],"./ii.awivc.ex.csv")
+write.csv(ai.awivc.exemplar[with(ai.awivc.exemplar, order(cluster,p.val)),][myvars],"./ai.awivc.ex.csv")
+write.csv(ti.awivc.exemplar[with(ti.awivc.exemplar, order(cluster,p.val)),][myvars],"./ti.awivc.ex.csv")
+write.csv(ta.awivc.exemplar[with(ta.awivc.exemplar, order(cluster,p.val)),][myvars],"./ta.awivc.ex.csv")
 
 ## CNJTYPE ================
 ### ecnj
-write.csv(ii.cnjtype.e.exemplar[with(ii.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ii.cnj.e.ex.csv")
-write.csv(ai.cnjtype.e.exemplar[with(ai.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ai.cnj.e.ex.csv")
-write.csv(ti.cnjtype.e.exemplar[with(ti.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ti.cnj.e.ex.csv")
-write.csv(ta.cnjtype.e.exemplar[with(ta.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ta.cnj.e.ex.csv")
+write.csv(ii.cnjtype.e.exemplar[with(ii.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"./ii.cnj.e.ex.csv")
+write.csv(ai.cnjtype.e.exemplar[with(ai.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"./ai.cnj.e.ex.csv")
+write.csv(ti.cnjtype.e.exemplar[with(ti.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"./ti.cnj.e.ex.csv")
+write.csv(ta.cnjtype.e.exemplar[with(ta.cnjtype.e.exemplar, order(cluster,p.val)),][myvars],"./ta.cnj.e.ex.csv")
 
 ### kaa
-write.csv(ii.cnjtype.kaa.exemplar[with(ii.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/bonkii.cnj.kaa.ex.csv")
-write.csv(ai.cnjtype.kaa.exemplar[with(ai.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ai.cnj.kaa.ex.csv")
-write.csv(ti.cnjtype.kaa.exemplar[with(ti.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ti.cnj.kaa.ex.csv")
-write.csv(ta.cnjtype.kaa.exemplar[with(ta.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ta.cnj.kaa.ex.csv")
+write.csv(ii.cnjtype.kaa.exemplar[with(ii.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"./bonkii.cnj.kaa.ex.csv")
+write.csv(ai.cnjtype.kaa.exemplar[with(ai.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"./ai.cnj.kaa.ex.csv")
+write.csv(ti.cnjtype.kaa.exemplar[with(ti.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"./ti.cnj.kaa.ex.csv")
+write.csv(ta.cnjtype.kaa.exemplar[with(ta.cnjtype.kaa.exemplar, order(cluster,p.val)),][myvars],"./ta.cnj.kaa.ex.csv")
 
 ### Other
-write.csv(ii.cnjtype.other.exemplar[with(ii.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ii.cnj.other.ex.csv")
-write.csv(ai.cnjtype.other.exemplar[with(ai.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ai.cnj.other.ex.csv")
-write.csv(ti.cnjtype.other.exemplar[with(ti.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ti.cnj.other.ex.csv")
-write.csv(ta.cnjtype.other.exemplar[with(ta.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"~/Desktop/bonk/ta.cnj.other.ex.csv")
+write.csv(ii.cnjtype.other.exemplar[with(ii.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"./ii.cnj.other.ex.csv")
+write.csv(ai.cnjtype.other.exemplar[with(ai.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"./ai.cnj.other.ex.csv")
+write.csv(ti.cnjtype.other.exemplar[with(ti.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"./ti.cnj.other.ex.csv")
+write.csv(ta.cnjtype.other.exemplar[with(ta.cnjtype.other.exemplar, order(cluster,p.val)),][myvars],"./ta.cnj.other.ex.csv")
 
