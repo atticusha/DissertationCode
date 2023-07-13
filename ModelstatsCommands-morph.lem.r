@@ -1,6 +1,34 @@
 #MODEL STATISTICS
+## Ind v. Cnj
+ii.indcnj.observed.my.morph <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ii.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ii.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
+table(ii.indcnj.observed.my.morph,ii.indcnj.predicted.my.morph)
+ii.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ii.indcnj.morph.glmer)), 1-as.vector(fitted(ii.indcnj.morph.glmer)))
+colnames(ii.indcnj.p.values.my.morph) <- c("Ind","eCnj")
+ii.indcnj.ModelStats.my.morph<- model.statistics(ii.indcnj.observed.my.morph, ii.indcnj.predicted.my.morph, ii.indcnj.p.values.my.morph)
 
-### Ind v. eCnj
+ai.indcnj.observed.my.morph <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ai.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ai.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
+table(ai.indcnj.observed.my.morph,ai.indcnj.predicted.my.morph)
+ai.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ai.indcnj.morph.glmer)), 1-as.vector(fitted(ai.indcnj.morph.glmer)))
+colnames(ai.indcnj.p.values.my.morph) <- c("Ind","eCnj")
+ai.indcnj.ModelStats.my.morph<- model.statistics(ai.indcnj.observed.my.morph, ai.indcnj.predicted.my.morph, ai.indcnj.p.values.my.morph)
+
+ti.indcnj.observed.my.morph <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ti.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ti.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
+table(ti.indcnj.observed.my.morph,ti.indcnj.predicted.my.morph)
+ti.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ti.indcnj.morph.glmer)), 1-as.vector(fitted(ti.indcnj.morph.glmer)))
+colnames(ti.indcnj.p.values.my.morph) <- c("Ind","eCnj")
+ti.indcnj.ModelStats.my.morph<- model.statistics(ti.indcnj.observed.my.morph, ti.indcnj.predicted.my.morph, ti.indcnj.p.values.my.morph)
+
+ta.indcnj.observed.my.morph <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ta.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ta.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
+table(ta.indcnj.observed.my.morph,ta.indcnj.predicted.my.morph)
+ta.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ta.indcnj.morph.glmer)), 1-as.vector(fitted(ta.indcnj.morph.glmer)))
+colnames(ta.indcnj.p.values.my.morph) <- c("Ind","eCnj")
+ta.indcnj.ModelStats.my.morph<- model.statistics(ta.indcnj.observed.my.morph, ta.indcnj.predicted.my.morph, ta.indcnj.p.values.my.morph)
+
+## Ind v. eCnj
 ii.ive.observed.my.morph <- ifelse(subset(AWive, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
 ii.ive.predicted.my.morph <- ifelse(as.vector(fitted(ii.ive.morph.glmer))>0.5, "Ind", "eCnj")
 table(ii.ive.observed.my.morph,ii.ive.predicted.my.morph)
@@ -30,9 +58,7 @@ colnames(ta.ive.p.values.my.morph) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.morph<- model.statistics(ta.ive.observed.my.morph, ta.ive.predicted.my.morph, ta.ive.p.values.my.morph)
 
 
-#================================================
-### eCnj v. kaaCnj v. OtherCnj
-#================================================
+## Cnj Type
 ii.all.cnjtypes.observed.my.morph <- subset(AWCnj, II, OrderType, drop=TRUE)
 # Create an empty vector to store the column names
 ii.all.cnjtypes.p.values.my.morph <-cbind(fitted(ii.e.cnjtype.morph.glmer), fitted(ii.kaa.cnjtype.morph.glmer), fitted(ii.other.cnjtype.morph.glmer))
@@ -94,39 +120,4 @@ for (i in 1:nrow(ta.all.cnjtypes.p.values.my.sem)) {
 }
 table(ta.all.cnjtypes.observed.my.sem,ta.all.cnjtypes.predicted.my.sem)
 ta.all.cnjtypes.ModelStats.my.sem<- model.statistics(ta.all.cnjtypes.observed.my.sem, ta.all.cnjtypes.predicted.my.sem, ta.all.cnjtypes.p.values.my.sem)
-
-
-
-
-#================================================
-### Ind v. Cnj
-#================================================
-
-ii.indcnj.observed.my.morph <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ii.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ii.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
-table(ii.indcnj.observed.my.morph,ii.indcnj.predicted.my.morph)
-ii.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ii.indcnj.morph.glmer)), 1-as.vector(fitted(ii.indcnj.morph.glmer)))
-colnames(ii.indcnj.p.values.my.morph) <- c("Ind","eCnj")
-ii.indcnj.ModelStats.my.morph<- model.statistics(ii.indcnj.observed.my.morph, ii.indcnj.predicted.my.morph, ii.indcnj.p.values.my.morph)
-
-ai.indcnj.observed.my.morph <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ai.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ai.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
-table(ai.indcnj.observed.my.morph,ai.indcnj.predicted.my.morph)
-ai.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ai.indcnj.morph.glmer)), 1-as.vector(fitted(ai.indcnj.morph.glmer)))
-colnames(ai.indcnj.p.values.my.morph) <- c("Ind","eCnj")
-ai.indcnj.ModelStats.my.morph<- model.statistics(ai.indcnj.observed.my.morph, ai.indcnj.predicted.my.morph, ai.indcnj.p.values.my.morph)
-
-ti.indcnj.observed.my.morph <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ti.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ti.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
-table(ti.indcnj.observed.my.morph,ti.indcnj.predicted.my.morph)
-ti.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ti.indcnj.morph.glmer)), 1-as.vector(fitted(ti.indcnj.morph.glmer)))
-colnames(ti.indcnj.p.values.my.morph) <- c("Ind","eCnj")
-ti.indcnj.ModelStats.my.morph<- model.statistics(ti.indcnj.observed.my.morph, ti.indcnj.predicted.my.morph, ti.indcnj.p.values.my.morph)
-
-ta.indcnj.observed.my.morph <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ta.indcnj.predicted.my.morph <- ifelse(as.vector(fitted(ta.indcnj.morph.glmer))>0.5, "Ind", "eCnj")
-table(ta.indcnj.observed.my.morph,ta.indcnj.predicted.my.morph)
-ta.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ta.indcnj.morph.glmer)), 1-as.vector(fitted(ta.indcnj.morph.glmer)))
-colnames(ta.indcnj.p.values.my.morph) <- c("Ind","eCnj")
-ta.indcnj.ModelStats.my.morph<- model.statistics(ta.indcnj.observed.my.morph, ta.indcnj.predicted.my.morph, ta.indcnj.p.values.my.morph)
 
