@@ -29,26 +29,6 @@ ta.ive.p.values.my.morph <- cbind(as.vector(fitted(ta.ive.morph.glmer)), 1-as.ve
 colnames(ta.ive.p.values.my.morph) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.morph<- model.statistics(ta.ive.observed.my.morph, ta.ive.predicted.my.morph, ta.ive.p.values.my.morph)
 
-## Save Model stats##
-    sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. eCnj/ii-ive-ModelStats.my.morph.txt')
-print(ii.ive.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. eCnj/ai-ive-ModelStats.my.morph.txt')
-print(ai.ive.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. eCnj/ti-ive-ModelStats.my.morph.txt')
-print(ti.ive.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. eCnj/ta-ive-ModelStats.my.morph.txt')
-print(ta.ive.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-
-
-
-
-
-
-
 
 #================================================
 ### eCnj v. kaaCnj v. OtherCnj
@@ -149,18 +129,4 @@ table(ta.indcnj.observed.my.morph,ta.indcnj.predicted.my.morph)
 ta.indcnj.p.values.my.morph <- cbind(as.vector(fitted(ta.indcnj.morph.glmer)), 1-as.vector(fitted(ta.indcnj.morph.glmer)))
 colnames(ta.indcnj.p.values.my.morph) <- c("Ind","eCnj")
 ta.indcnj.ModelStats.my.morph<- model.statistics(ta.indcnj.observed.my.morph, ta.indcnj.predicted.my.morph, ta.indcnj.p.values.my.morph)
-
-## Save Model stats##
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. Cnj/ii-indcnj-ModelStats.my.morph.txt')
-print(ii.indcnj.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. Cnj/ai-indcnj-ModelStats.my.morph.txt')
-print(ai.indcnj.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. Cnj/ti-indcnj-ModelStats.my.morph.txt')
-print(ti.indcnj.ModelStats.my.morph, max.print = NA)
-sink(NULL)
-sink(file = '/Users/atticusharrigan/Dres/ModelStatistics/Morph.Lem/Ind vs. Cnj/ta-indcnj-ModelStats.my.morph.txt')
-print(ta.indcnj.ModelStats.my.morph, max.print = NA)
-sink(NULL)
 
