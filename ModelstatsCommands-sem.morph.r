@@ -1,6 +1,36 @@
 #MODEL STATISTICS
 
-### Ind v. eCnj
+## Ind v. Cnj
+
+ii.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ii.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ii.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
+table(ii.indcnj.observed.my.fixed,ii.indcnj.predicted.my.fixed)
+ii.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ii.indcnj.glm.fixed)), 1-as.vector(fitted(ii.indcnj.glm.fixed)))
+colnames(ii.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
+ii.indcnj.ModelStats.my.fixed<- model.statistics(ii.indcnj.observed.my.fixed, ii.indcnj.predicted.my.fixed, ii.indcnj.p.values.my.fixed)
+
+ai.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ai.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ai.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
+table(ai.indcnj.observed.my.fixed,ai.indcnj.predicted.my.fixed)
+ai.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ai.indcnj.glm.fixed)), 1-as.vector(fitted(ai.indcnj.glm.fixed)))
+colnames(ai.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
+ai.indcnj.ModelStats.my.fixed<- model.statistics(ai.indcnj.observed.my.fixed, ai.indcnj.predicted.my.fixed, ai.indcnj.p.values.my.fixed)
+
+ti.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ti.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ti.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
+table(ti.indcnj.observed.my.fixed,ti.indcnj.predicted.my.fixed)
+ti.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ti.indcnj.glm.fixed)), 1-as.vector(fitted(ti.indcnj.glm.fixed)))
+colnames(ti.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
+ti.indcnj.ModelStats.my.fixed<- model.statistics(ti.indcnj.observed.my.fixed, ti.indcnj.predicted.my.fixed, ti.indcnj.p.values.my.fixed)
+
+ta.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
+ta.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ta.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
+table(ta.indcnj.observed.my.fixed,ta.indcnj.predicted.my.fixed)
+ta.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ta.indcnj.glm.fixed)), 1-as.vector(fitted(ta.indcnj.glm.fixed)))
+colnames(ta.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
+ta.indcnj.ModelStats.my.fixed<- model.statistics(ta.indcnj.observed.my.fixed, ta.indcnj.predicted.my.fixed, ta.indcnj.p.values.my.fixed)
+
+## Ind v. eCnj
 ii.ive.observed.my.fixed <- ifelse(subset(AWive, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
 ii.ive.predicted.my.fixed <- ifelse(as.vector(fitted(ii.ive.glm.fixed))>0.5, "Ind", "eCnj")
 table(ii.ive.observed.my.fixed,ii.ive.predicted.my.fixed)
@@ -29,12 +59,7 @@ ta.ive.p.values.my.fixed <- cbind(as.vector(fitted(ta.ive.glm.fixed)), 1-as.vect
 colnames(ta.ive.p.values.my.fixed) <- c("Ind","eCnj")
 ta.ive.ModelStats.my.fixed<- model.statistics(ta.ive.observed.my.fixed, ta.ive.predicted.my.fixed, ta.ive.p.values.my.fixed)
 
-
-
-
-#================================================
-### eCnj v. kaaCnj v. OtherCnj
-#================================================
+## Cnj Type
 
 ii.all.cnjtypes.observed.my.fixed <- subset(AWCnj, II, OrderType, drop=TRUE)
 # Create an empty vector to store the column names
@@ -101,38 +126,3 @@ for (i in 1:nrow(ta.all.cnjtypes.p.values.my.fixed)) {
 }
 table(ta.all.cnjtypes.observed.my.fixed,ta.all.cnjtypes.predicted.my.fixed)
 ta.all.cnjtypes.ModelStats.my.fixed<- model.statistics(ta.all.cnjtypes.observed.my.fixed, ta.all.cnjtypes.predicted.my.fixed, ta.all.cnjtypes.p.values.my.fixed)
-
-
-#================================================
-### Ind v. Cnj
-#================================================
-
-ii.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, II, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ii.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ii.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
-table(ii.indcnj.observed.my.fixed,ii.indcnj.predicted.my.fixed)
-ii.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ii.indcnj.glm.fixed)), 1-as.vector(fitted(ii.indcnj.glm.fixed)))
-colnames(ii.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
-ii.indcnj.ModelStats.my.fixed<- model.statistics(ii.indcnj.observed.my.fixed, ii.indcnj.predicted.my.fixed, ii.indcnj.p.values.my.fixed)
-
-ai.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, AI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ai.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ai.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
-table(ai.indcnj.observed.my.fixed,ai.indcnj.predicted.my.fixed)
-ai.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ai.indcnj.glm.fixed)), 1-as.vector(fitted(ai.indcnj.glm.fixed)))
-colnames(ai.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
-ai.indcnj.ModelStats.my.fixed<- model.statistics(ai.indcnj.observed.my.fixed, ai.indcnj.predicted.my.fixed, ai.indcnj.p.values.my.fixed)
-
-ti.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, TI, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ti.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ti.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
-table(ti.indcnj.observed.my.fixed,ti.indcnj.predicted.my.fixed)
-ti.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ti.indcnj.glm.fixed)), 1-as.vector(fitted(ti.indcnj.glm.fixed)))
-colnames(ti.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
-ti.indcnj.ModelStats.my.fixed<- model.statistics(ti.indcnj.observed.my.fixed, ti.indcnj.predicted.my.fixed, ti.indcnj.p.values.my.fixed)
-
-ta.indcnj.observed.my.fixed <- ifelse(subset(AWnimp, TA, OrderType, drop=TRUE) == "Ind", "Ind", "eCnj")
-ta.indcnj.predicted.my.fixed <- ifelse(as.vector(fitted(ta.indcnj.glm.fixed))>0.5, "Ind", "eCnj")
-table(ta.indcnj.observed.my.fixed,ta.indcnj.predicted.my.fixed)
-ta.indcnj.p.values.my.fixed <- cbind(as.vector(fitted(ta.indcnj.glm.fixed)), 1-as.vector(fitted(ta.indcnj.glm.fixed)))
-colnames(ta.indcnj.p.values.my.fixed) <- c("Ind","eCnj")
-ta.indcnj.ModelStats.my.fixed<- model.statistics(ta.indcnj.observed.my.fixed, ta.indcnj.predicted.my.fixed, ta.indcnj.p.values.my.fixed)
-
-
